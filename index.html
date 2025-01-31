@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fares | online Store</title>
+    <link rel="icon" href="img/icon.png">
+
+    <!--  FILE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- //  FILE CSS // -->
 </head>
 <body>
-    
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+                <form action="" class="search-box">
+                    <div class="select-box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="Electronics & Digita">Electronics & Digita</option>
+                            <option value="Phones & Tablet">Phones & Tablety</option>
+                            <option value="Fashion & Clothings">Fashion & Clothings</option>
+                            <option value="Telivsion & Monitor">Telivsion & Monitor</option>
+                            <option value="Jewelry & Watches">Jewelry & Watches</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Toys & Hobbies">Toys & Hobbies</option>
+                        </select>
+                    </div>
+                    <input type="text " name="search" placeholder="search For Products" required>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count-favourite">0</span>
+                        </a>
+                    </div>
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="count count-item-header">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- FILE JS -->
+    <script src="js/main.js"></script>
+    <!-- // FILE JS // -->
 </body>
 </html>
