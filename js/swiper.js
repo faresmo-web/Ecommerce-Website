@@ -23,6 +23,25 @@ var swiper = new Swiper(".slide-product", {
     navigation:{
         nextEl:".swiper-button-next",
         prevEl:".swiper-button-prev"
+    },
+    loop:true,
+    breakpoints:{
+        1200:{
+            slidesPerView : 5,
+            spaceBetween : 20,
+        },
+        1000:{
+            slidesPerView : 4,
+            spaceBetween : 20,
+        },
+        700:{
+            slidesPerView : 3,
+            spaceBetween : 14,
+        },
+        0:{
+            slidesPerView : 2,
+            spaceBetween : 9,
+        }
+
     }
-    ,loop:true
 });

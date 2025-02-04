@@ -8,6 +8,12 @@ function openCloseCart(){
     cart.classList.toggle("active")
 }
 
+let navLinks = document.querySelector(".nav-links")
+
+function openMenu(){
+    navLinks.classList.toggle("active")
+}
+
 fetch("products.json")
 .then(response => response.json())
 .then(data =>{
