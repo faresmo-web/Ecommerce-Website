@@ -14,6 +14,31 @@
     <!-- //  FILE CSS // -->
 </head>
 <body>
+
+
+    <div class="cart">
+        <div class="top-cart">
+            <h3>Cart Items : <span class="count-item-cart">0</span></h3>
+            <span onclick="openCloseCart()" class="close-cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+        <div class="items-in-cart" id="cart-itms">
+            
+        </div>
+
+        <div class="bottom-cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price-cart-toral">$0</p>
+            </div>
+
+            <div class="button-cart">
+                <a href="#" class="btn-cart btn">Checkout</a>
+                <span onclick="openCloseCart()" class="btn-cart trans-bg btn">Shp More</span>
+            </div>
+        </div>
+    </div>
+
+
     <header>
         <!-- TOP HEADER -->
         <div class="top-header">
@@ -44,7 +69,7 @@
                             <span class="count count-favourite">0</span>
                         </a>
                     </div>
-                    <div class="icon">
+                    <div onclick="openCloseCart()" class="icon">
                         <a href="#">
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span class="count count-item-header">0</span>
@@ -376,9 +401,9 @@
     
     <!-- FILE JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/swiper.js"></script>
     <script src="js/items-home.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/main.js"></script>
     <!-- // FILE JS // -->
 </body>
 </html>

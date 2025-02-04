@@ -1,7 +1,7 @@
 fetch("products.json")
 .then(response => response.json())
 .then(data =>{
-    console.log(data)
+    const cart = JSON.parse(localStorage.getItem("cart")) || []
 
     const swiperItemsSale = document.getElementById("swiper-items-sale")
 
@@ -20,6 +20,8 @@ fetch("products.json")
 
     data.forEach(product => {
         if(product.old_price){
+
+            const isInCart = cart.some(cartItem => cartItem.id === product.id)
 
             const percent_disc = Math.floor((product.old_price - product.price) / product.old_price * 100)
             swiperItemsSale.innerHTML +=`
@@ -43,8 +45,8 @@ fetch("products.json")
                                 <p class="old-price">$${product.old_price}</p>
                             </div>
                             <div class="icons">
-                                <span class="btn-add-cart">
-                                    <i class="fa-solid fa-cart-shopping"></i> add to cart
+                                <span class="btn-add-cart ${isInCart ? 'active' : ''}" data-id="${product.id}">
+                                    <i class="fa-solid fa-cart-shopping"></i> ${isInCart ? 'Iten in cart' : 'add to cart'}
                                 </span>
                                 <span class="icon-product">
                                     <i class="fa-regular fa-heart"></i>
@@ -57,6 +59,8 @@ fetch("products.json")
 
     data.forEach(product => {
         if(product.catetory == "electronics"){
+
+            const isInCart = cart.some(cartItem => cartItem.id === product.id)
 
             const old_price_pargrahp = product.old_price ? `<p class="old-price">$${product.old_price}</p>` : ""
             const percent_disc_div = product.old_price ? ` <span class="sale-present">%${Math.floor((product.old_price - product.price) / product.old_price * 100)}</span>` : ""
@@ -84,8 +88,8 @@ fetch("products.json")
                                 ${old_price_pargrahp}
                             </div>
                             <div class="icons">
-                                <span class="btn-add-cart">
-                                    <i class="fa-solid fa-cart-shopping"></i> add to cart
+                                <span class="btn-add-cart ${isInCart ? 'active' : ''}" data-id="${product.id}">
+                                    <i class="fa-solid fa-cart-shopping"></i> ${isInCart ? 'Iten in cart' : 'add to cart'}
                                 </span>
                                 <span class="icon-product">
                                     <i class="fa-regular fa-heart"></i>
@@ -99,6 +103,8 @@ fetch("products.json")
 
     data.forEach(product => {
         if(product.catetory == "appliances"){
+
+            const isInCart = cart.some(cartItem => cartItem.id === product.id)
 
             const old_price_pargrahp = product.old_price ? `<p class="old-price">$${product.old_price}</p>` : ""
             const percent_disc_div = product.old_price ? ` <span class="sale-present">%${Math.floor((product.old_price - product.price) / product.old_price * 100)}</span>` : ""
@@ -126,8 +132,8 @@ fetch("products.json")
                                 ${old_price_pargrahp}
                             </div>
                             <div class="icons">
-                                <span class="btn-add-cart">
-                                    <i class="fa-solid fa-cart-shopping"></i> add to cart
+                                <span class="btn-add-cart ${isInCart ? 'active' : ''}" data-id="${product.id}">
+                                    <i class="fa-solid fa-cart-shopping"></i> ${isInCart ? 'Iten in cart' : 'add to cart'}
                                 </span>
                                 <span class="icon-product">
                                     <i class="fa-regular fa-heart"></i>
@@ -142,6 +148,8 @@ fetch("products.json")
 
     data.forEach(product => {
         if(product.catetory == "mobiles"){
+
+            const isInCart = cart.some(cartItem => cartItem.id === product.id)
 
             const old_price_pargrahp = product.old_price ? `<p class="old-price">$${product.old_price}</p>` : ""
             const percent_disc_div = product.old_price ? ` <span class="sale-present">%${Math.floor((product.old_price - product.price) / product.old_price * 100)}</span>` : ""
@@ -169,8 +177,8 @@ fetch("products.json")
                                 ${old_price_pargrahp}
                             </div>
                             <div class="icons">
-                                <span class="btn-add-cart">
-                                    <i class="fa-solid fa-cart-shopping"></i> add to cart
+                                <span class="btn-add-cart ${isInCart ? 'active' : ''}" data-id="${product.id}">
+                                    <i class="fa-solid fa-cart-shopping"></i> ${isInCart ? 'Iten in cart' : 'add to cart'}
                                 </span>
                                 <span class="icon-product">
                                     <i class="fa-regular fa-heart"></i>
